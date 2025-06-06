@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  bu:
+    image: us-west4-docker.pkg.dev/civic-wharf-450600-v0/acme/bu:latest
+    container_name: browser-use
+    ports:
+      - "8000:8000"
+    restart: always
+  ab:
+    image: us-west4-docker.pkg.dev/civic-wharf-450600-v0/acme/ab:latest
+    container_name: agent-browser
+    ports:
+      - "8080:8080"
+    restart: always
